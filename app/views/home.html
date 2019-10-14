@@ -10,10 +10,26 @@
       </ol>
     </section>
 
+
+   <!-- /.box -->
+ </div>
+ </div>
+
     <!-- Main content -->
     <section class="content">
+      <div class="alert alert-success alert-dismissible" ng-if="isSuccess">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-check"></i> Alert!</h4>
+        Success alert preview. This alert is dismissable.
+      </div>
 
-      <div class="box box-default">
+      <div class="alert alert-danger alert-dismissible" ng-if="isFailed">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <h4><i class="icon fa fa-check"></i> Alert!</h4>
+        Success alert preview. This alert is dismissable.
+      </div>
+
+      <div class="box box-default" ng-if="!isLoading">
         <div class="box-header with-border">
           <h3 class="box-title">Select2</h3>
 
@@ -28,7 +44,7 @@
             <div class="col-md-12">
               <div class="form-group">
                 <label>Minimal</label>
-                <select class="form-control select2" style="width: 100%;">
+                <select ng-model="param" class="form-control select2" style="width: 100%;">
                   <option selected="selected">Alabama</option>
                   <option>Alaska</option>
                   <option>California</option>
@@ -41,7 +57,7 @@
               <!-- /.form-group -->
               <div class="form-group">
                 <label>Disabled</label>
-                <select class="form-control select2" disabled="disabled" style="width: 100%;">
+                <select  ng-model="param2" class="form-control select2" style="width: 100%;">
                   <option selected="selected">Alabama</option>
                   <option>Alaska</option>
                   <option>California</option>
@@ -52,7 +68,7 @@
                 </select>
               </div>
 
-              <button type="button" style="width:150px" class="btn btn-block btn-success btn-sm">Execute</button>
+              <button type="button" style="width:150px" ng-click="execute()" class="btn btn-block btn-success btn-sm">Execute</button>
               <!-- /.form-group -->
             </div>
             <!-- /.col -->
@@ -64,6 +80,28 @@
 
 
           <!-- /.row -->
+        </div>
+
+
+
+      <div class="row "  ng-if="isLoading">
+
+        <div class="col-md-12">
+          <div class="box box-danger box-solid">
+            <div class="box-header">
+              <h3 class="box-title">Loading state</h3>
+            </div>
+            <div class="box-body">
+              The body of the box
+            </div>
+            <!-- /.box-body -->
+            <!-- Loading (remove the following to stop the loading)-->
+            <div class="overlay">
+              <i class="fa fa-refresh fa-spin"></i>
+            </div>
+            <!-- end loading -->
+          </div>
+          <!-- /.box -->
         </div>
 
       </div>

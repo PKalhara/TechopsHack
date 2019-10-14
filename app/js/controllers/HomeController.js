@@ -10,27 +10,34 @@ myApp.controller('HomeController', ['$scope','$http','$q','$location','toastr', 
         $scope.url="localhost:3000/";
         $scope.isLoading=false;
         $scope.isAnalyse=true;
+        $scope.isSuccess=false;
+        $scope.isFailed=false;
+
+
         
         
        // $scope.login();
 
     };
     
-    $scope.login = function (){
-        
-         $scope.isLoading=true;
-         $scope.isAnalyse=false;
-    
-        console.log($scope.url);
-         
-        $http.get($scope.appConfig+'/an/'+$scope.url, {
-                url: $scope.url
+    $scope.execute = function (){
+
+        $scope.isLoading=true;
+        console.log($scope.param)
+
+        $http.get($scope.appConfig+'/execute/:'+$scope.param+'/'+$scope.param2, {
+                param: $scope.param,
+                param2: $scope.param2
             }).success(
                 function(data){
                     console.log(data);
-                    
-                     $location.url('/analytics');
-                    
+                    $scope.isLoading=false;
+                    if(data=="success"){
+                    $scope.isSuccess=true;
+                    }else if(data=="failed"){
+                    $scope.isFailed=true;
+                    }
+
                 }
             ).error(
                 function(error){

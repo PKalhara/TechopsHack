@@ -8,6 +8,11 @@ app.use(express.static("./app"));
 const wappalyzer = require('wappalyzer');
 const fs = require('fs');
 
+//const PowerShell = require("powershell");
+//let ps = new PowerShell("echo 'powershell is awesome'");
+
+
+
 
 var connection = mysql.createConnection({
 	host :'localhost',
@@ -20,7 +25,7 @@ var connection = mysql.createConnection({
 app.set('port',3000);
 
 app.use(express.static(__dirname));
-app.use(express.static(path.join(__dirname,'C:\projects\New folder (2)\InterviewUI\views\my_file.json')));
+app.use(express.static(path.join(__dirname,'/home/prageethkalhara/Projects/projects/hack/TechopsHack')));
 
 app.use(bodyparser.urlencoded({ extended: false }));
 
@@ -128,6 +133,41 @@ app.get('/removeStudent/:id', function(req,res){
 
 		res.redirect('/m');
 	});
+});
+
+app.get('/execute/:param/:param2', function(req,res){
+
+	console.log(req.params.param);
+	console.log(req.params.param2);
+//	Items.deleteStudent(req.params.id,function(err,student){
+//		if (err){
+//			console.log(err);
+//		}
+//
+//		res.redirect('/m');
+//	});
+
+
+   const Shell = require('node-powershell');
+
+   const ps = new Shell({
+     executionPolicy: 'Bypass',
+     noProfile: true
+   });
+
+   ps.addCommand('/home/prageethkalhara/Projects/projects/hack/TechopsHack/power.ps1');
+
+   ps.invoke()
+   .then(output => {
+     console.log(output);
+     console.log("Doneeeee")
+     res.status(200).send("success");
+   })
+   .catch(err => {
+   res.status(200).send("failed");
+     console.log(err);
+   });
+
 });
 
 app.listen(app.get('port'));
