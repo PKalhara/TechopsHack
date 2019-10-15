@@ -135,17 +135,12 @@ app.get('/removeStudent/:id', function(req,res){
 	});
 });
 
-app.get('/execute/:param/:param2', function(req,res){
+app.get('/execute/:scriptParam1/:scriptParam2/:scriptParam3/:scriptParam4', function(req,res){
 
-	console.log(req.params.param);
-	console.log(req.params.param2);
-//	Items.deleteStudent(req.params.id,function(err,student){
-//		if (err){
-//			console.log(err);
-//		}
-//
-//		res.redirect('/m');
-//	});
+	console.log(req.params.scriptParam1);
+	console.log(req.params.scriptParam2);
+	console.log(req.params.scriptParam3);
+	console.log(req.params.scriptParam4);
 
 
    const Shell = require('node-powershell');
@@ -155,7 +150,7 @@ app.get('/execute/:param/:param2', function(req,res){
      noProfile: true
    });
 
-   ps.addCommand('/home/prageethkalhara/Projects/projects/hack/TechopsHack/power.ps1');
+   ps.addCommand('/home/prageethkalhara/Projects/projects/hack/TechopsHack/power.ps1 '+req.params.scriptParam1+' '+req.params.scriptParam2+' '+req.params.scriptParam3+' '+req.params.scriptParam4);
 
    ps.invoke()
    .then(output => {

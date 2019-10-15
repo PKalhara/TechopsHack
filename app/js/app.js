@@ -1,4 +1,4 @@
-var myApp = angular.module('myApp', ['ngRoute','toastr']);
+var myApp = angular.module('myApp', ['ngRoute','toastr','angularjs-dropdown-multiselect']);
 
 
 myApp.config(['$routeProvider','toastrConfig', function($routeProvider,toastrConfig) {

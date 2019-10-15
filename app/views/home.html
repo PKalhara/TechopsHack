@@ -1,111 +1,139 @@
- <section class="content-header">
-      <h1>
-        Script Params
-        <small>Preview</small>
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">PowerShell</a></li>
-        <li class="active"></li>
-      </ol>
-    </section>
+<section class="content-header" style="margin-bottom:15px">
 
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="#">PowerShell</a></li>
+    <li class="active"></li>
+  </ol>
+</section>
 
-   <!-- /.box -->
- </div>
- </div>
+<!-- Main content -->
+<section class="content">
+  <div class="alert alert-success alert-dismissible" ng-if="isSuccess">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4><i class="icon fa fa-check"></i> Alert!</h4>
+    Success alert preview. This alert is dismissable.
+  </div>
 
-    <!-- Main content -->
-    <section class="content">
-      <div class="alert alert-success alert-dismissible" ng-if="isSuccess">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <h4><i class="icon fa fa-check"></i> Alert!</h4>
-        Success alert preview. This alert is dismissable.
+  <div class="alert alert-danger alert-dismissible" ng-if="isFailed">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h4><i class="icon fa fa-check"></i> Alert!</h4>
+    Success alert preview. This alert is dismissable.
+  </div>
+
+  <div class="box box-default">
+    <div class="box-header with-border">
+      <h3 class="box-title">Executor</h3>
+
+      <div class="box-tools pull-right">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
       </div>
-
-      <div class="alert alert-danger alert-dismissible" ng-if="isFailed">
-        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <h4><i class="icon fa fa-check"></i> Alert!</h4>
-        Success alert preview. This alert is dismissable.
-      </div>
-
-      <div class="box box-default" ng-if="!isLoading">
-        <div class="box-header with-border">
-          <h3 class="box-title">Select2</h3>
-
-          <div class="box-tools pull-right">
-            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
-            <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-remove"></i></button>
-          </div>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="form-group">
-                <label>Minimal</label>
-                <select ng-model="param" class="form-control select2" style="width: 100%;">
-                  <option selected="selected">Alabama</option>
-                  <option>Alaska</option>
-                  <option>California</option>
-                  <option>Delaware</option>
-                  <option>Tennessee</option>
-                  <option>Texas</option>
-                  <option>Washington</option>
-                </select>
-              </div>
-              <!-- /.form-group -->
-              <div class="form-group">
-                <label>Disabled</label>
-                <select  ng-model="param2" class="form-control select2" style="width: 100%;">
-                  <option selected="selected">Alabama</option>
-                  <option>Alaska</option>
-                  <option>California</option>
-                  <option>Delaware</option>
-                  <option>Tennessee</option>
-                  <option>Texas</option>
-                  <option>Washington</option>
-                </select>
-              </div>
-
-              <button type="button" style="width:150px" ng-click="execute()" class="btn btn-block btn-success btn-sm">Execute</button>
-              <!-- /.form-group -->
-            </div>
-            <!-- /.col -->
-              <!-- /.form-group -->
-            </div>
-
-            <!-- /.col -->
-          </div>
-
-
-          <!-- /.row -->
-        </div>
-
-
-
-      <div class="row "  ng-if="isLoading">
-
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+      <div class="row">
         <div class="col-md-12">
-          <div class="box box-danger box-solid">
-            <div class="box-header">
-              <h3 class="box-title">Loading state</h3>
-            </div>
-            <div class="box-body">
-              The body of the box
-            </div>
-            <!-- /.box-body -->
-            <!-- Loading (remove the following to stop the loading)-->
-            <div class="overlay">
-              <i class="fa fa-refresh fa-spin"></i>
-            </div>
-            <!-- end loading -->
+          <div class="form-group">
+            <label>Vcenter</label>
+            <select ng-model="drpone" class="form-control select2" style="width: 100%;">
+              <option  selected="selected">Alabama</option>
+              <option>Alaska</option>
+              <option>California</option>
+              <option>Delaware</option>
+              <option>Tennessee</option>
+              <option>Texas</option>
+              <option>Washington</option>
+            </select>
           </div>
-          <!-- /.box -->
-        </div>
+          <!-- /.form-group -->
+          <div class="form-group">
+            <label>Cluster</label>
+            <select ng-model="drptwo" class="form-control select2" style="width: 100%;">
+              <option  selected="selected">Alabama</option>
+              <option>Alaska</option>
+              <option>California</option>
+              <option>Delaware</option>
+              <option>Tennessee</option>
+              <option>Texas</option>
+              <option>Washington</option>
+            </select>
+          </div>
 
+          <div class="form-group">
+            <label>Esxi Host</label>
+            <select ng-model="drpthree" class="form-control select2" style="width: 100%;">
+              <option  selected="selected">Alabama</option>
+              <option>Alaska</option>
+              <option>California</option>
+              <option>Delaware</option>
+              <option>Tennessee</option>
+              <option>Texas</option>
+              <option>Washington</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Esxi Version</label>
+            <select ng-model="drpthree" class="form-control select2" style="width: 100%;">
+              <option>6.0.0</option>
+              <option>5.5.0</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Esxi</label>
+            <select class="form-control select2" ng-model="esxi" multiple="multiple" data-placeholder="Select a State"
+                    style="width: 100%;">
+              <option>Alabama</option>
+              <option>Alaska</option>
+              <option>California</option>
+              <option>Delaware</option>
+              <option>Tennessee</option>
+              <option>Texas</option>
+              <option>Washington</option>
+            </select>
+          </div>
+
+
+         <button type="button" style="width:150px" ng-click="execute()" class="btn btn-block btn-success btn-sm">Execute</button>
+          <!-- /.form-group -->
+        </div>
+        <!-- /.col -->
+        <!-- /.form-group -->
       </div>
-        <!--/.col (right) -->
+
+      <!-- /.col -->
+    </div>
+
+
+    <!-- /.row -->
+  </div>
+
+  </div>
+  <!--/.col (right) -->
+  </div>
+
+  <div class="row "  ng-if="isLoading">
+
+    <div class="col-md-12">
+      <div class="box box-danger box-solid">
+        <div class="box-header">
+          <h3 class="box-title">Loading state</h3>
+        </div>
+        <div class="box-body">
+          The body of the box
+        </div>
+        <!-- /.box-body -->
+        <!-- Loading (remove the following to stop the loading)-->
+        <div class="overlay">
+          <i class="fa fa-refresh fa-spin"></i>
+        </div>
+        <!-- end loading -->
       </div>
-      <!-- /.row -->
-    </section>
+      <!-- /.box -->
+    </div>
+
+  </div>
+  <!-- /.row -->
+</section>

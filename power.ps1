@@ -1,1 +1,3 @@
-New-Item test.txt
+Write-Host $args[0]
+
+
