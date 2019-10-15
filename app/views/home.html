@@ -51,13 +51,16 @@
                   <option>Washington</option>
                 </select>
               </div>
-              
+
               <button type="button" style="width:150px" class="btn btn-block btn-success btn-sm">Execute</button>
               <!-- /.form-group -->
             </div>
             <div class="col-md-6">
               <div class="form-group">
-                <pre id="test" class="form-control" style="width: 100%; height: 300px; resize: vertical" readonly></pre>
+                <pre class="form-control code-block-pre" id="test"><code class="code-block-code" id="code"></code></pre>
+                <div>
+                  <button id="autoscroll" type="button" onclick="toggleAutoScroll()">Toggle AutoScroll</button>
+                </div>
               </div>
             </div> 
             
