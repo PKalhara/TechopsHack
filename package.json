@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angularjs-dropdown-multiselect": "^2.0.0-beta.10",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "highlight.js": "^9.15.10",
@@ -18,6 +19,8 @@
     "jsdom": "^15.1.1",
     "mongoose": "^4.10.6",
     "mysql": "^2.13.0",
+    "node-powershell": "^4.0.0",
+    "powershell": "^2.3.1",
     "wappalyzer": "^4.1.0"
   }
 }
