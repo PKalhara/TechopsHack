@@ -1,3 +1,4 @@
+const highlight = require('highlight.js');
 var express = require('express');
 var path = require('path');
 var mysql = require('mysql');
@@ -166,4 +167,4 @@ app.get('/execute/:scriptParam1/:scriptParam2/:scriptParam3/:scriptParam4', func
 });
 
 app.listen(app.get('port'));
-console.log('~~~Server Runnign on port localhost:'+app.get('port')+'~~~');
+console.log('~~~Server Running on port localhost:'+app.get('port')+'~~~');
