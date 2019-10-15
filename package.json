@@ -11,7 +11,10 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "htmlparser": "^1.7.7",
     "jade": "^1.11.0",
+    "jquery": "^3.4.1",
+    "jsdom": "^15.1.1",
     "mongoose": "^4.10.6",
     "mysql": "^2.13.0",
     "wappalyzer": "^4.1.0"

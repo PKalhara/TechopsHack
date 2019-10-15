@@ -41,6 +41,17 @@
   <script src="js/controllers/login.js"></script>
   <script src="js/controllers/AnalyticsController.js"></script>
   <script src="js/controllers/HomeController.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    setInterval(() => {
+      read()
+    }, 1000);
+    function read(){
+      jQuery.get('test.txt',function(data){
+        $('#test').html(data);
+      });
+    }
+  </script>
 	
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
