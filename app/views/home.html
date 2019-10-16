@@ -36,7 +36,7 @@
         <div class="col-md-6">
           <div class="form-group">
             <label>Vcenter</label>
-            <select ng-model="drpone" class="form-control select2" style="width: 100%;">
+            <select ng-model="drpone" class="form-control useSelect2" style="width: 100%;">
               <option  selected="selected">Alabama</option>
               <option>Alaska</option>
               <option>California</option>
@@ -50,7 +50,7 @@
           <!-- /.form-group -->
           <div class="form-group">
             <label>Cluster</label>
-            <select ng-model="drptwo" class="form-control select2" style="width: 100%;">
+            <select ng-model="drptwo" class="form-control useSelect2" style="width: 100%;">
               <option  selected="selected">Alabama</option>
               <option>Alaska</option>
               <option>California</option>
@@ -64,7 +64,7 @@
 
           <div class="form-group">
             <label>Esxi Host</label>
-            <select ng-model="drpthree" class="form-control select2" style="width: 100%;">
+            <select ng-model="drpthree" class="form-control useSelect2" style="width: 100%;">
               <option  selected="selected">Alabama</option>
               <option>Alaska</option>
               <option>California</option>
@@ -77,7 +77,7 @@
 
           <div class="form-group">
             <label>Esxi Version</label>
-            <select ng-model="drpthree" class="form-control select2" style="width: 100%;">
+            <select ng-model="drpthree" class="form-control useSelect2" style="width: 100%;">
               <option>6.0.0</option>
               <option>5.5.0</option>
             </select>
@@ -85,8 +85,7 @@
 
           <div class="form-group">
             <label>Esxi</label>
-            <select class="form-control select2" ng-model="esxi" multiple="multiple" data-placeholder="Select a State"
-                    style="width: 100%;">
+            <select class="useSelect2" data-placeholder="Select a State" style="width: 100%;" multiple="multiple">
               <option>Alabama</option>
               <option>Alaska</option>
               <option>California</option>

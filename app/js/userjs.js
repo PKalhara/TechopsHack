@@ -19,3 +19,7 @@ function read(){
     $('#code').html(data);
     });
 }
+
+$(document).ready(function() {
+    $('.useSelect2').select2();
+});
