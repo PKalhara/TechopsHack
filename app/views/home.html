@@ -49,7 +49,7 @@ background-color: green;
     <!-- /.box-header -->
     <div class="box-body">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
           <div class="form-group">
             <label>VMHost</label>
             <select ng-model="drpone" class="form-control select2" style="width: 100%;">
@@ -58,10 +58,11 @@ background-color: green;
               <option>vmhost-008c.ecollege.net</option>
             </select>
           </div>
+
           <!-- /.form-group -->
           <div class="form-group">
             <label>Cluster</label>
-            <select ng-model="drptwo" class="form-control select2" style="width: 100%;">
+            <select ng-model="drptwo" class="form-control useSelect2" style="width: 100%;">
               <option  selected="selected">Alabama</option>
               <option>Utility Cluster</option>
               <option>R810-04</option>
@@ -74,7 +75,7 @@ background-color: green;
 
           <div class="form-group">
             <label>Esxi Version</label>
-            <select ng-model="drpthree" class="form-control select2" style="width: 100%;">
+            <select ng-model="drpthree" class="form-control useSelect2" style="width: 100%;">
               <option>6.0.0</option>
               <option>5.5.0</option>
             </select>
@@ -82,8 +83,7 @@ background-color: green;
 
           <div class="form-group">
             <label>Esxi</label>
-            <select class="form-control select2" ng-model="esxi" multiple="multiple" data-placeholder="Select a State"
-                    style="width: 100%;">
+            <select class="useSelect2" data-placeholder="Select a State" style="width: 100%;" multiple="multiple">
               <option>Alabama</option>
               <option>Alaska</option>
               <option>California</option>
@@ -123,6 +123,16 @@ background-color: green;
 
           <!-- /.form-group -->
         </div>
+        <div class="col-md-6">
+            <div class="form-group">
+              <pre class="form-control code-block-pre" id="test"><code class="code-block-code" id="code"></code></pre>
+              <div>
+                <button id="autoscroll" class="btn btn-block btn-primary" type="button" onclick="toggleAutoScroll()">Toggle AutoScroll</button>
+              </div>
+            </div>
+       </div>
+      </div>
+             
         <!-- /.col -->
         <!-- /.form-group -->
       </div>
