@@ -31,18 +31,18 @@
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <script type="text/javascript" src="angularjs-dropdown-multiselect.js"></script>
   <![endif]-->
-  
-    <script src="js/lib/angular/angular.min.js"></script>
-    <script src="js/lib/angular/talkify.min.js"></script>
-    <script src="js/lib/angular/angular-route.min.js"></script>
-    <script src="js/lib/angular/angular-animate.min.js"></script>
-    <script src="js/lib/angular/angular-material.min.js"></script>
-    <script src="js/lib/angular/angular-aria.min.js"></script>
-    <script src="js/lib/angular/notification.js"></script>
 
-    <script src="https://unpkg.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
-  
-  
+  <script src="js/lib/angular/angular.min.js"></script>
+  <script src="js/lib/angular/talkify.min.js"></script>
+  <script src="js/lib/angular/angular-route.min.js"></script>
+  <script src="js/lib/angular/angular-animate.min.js"></script>
+  <script src="js/lib/angular/angular-material.min.js"></script>
+  <script src="js/lib/angular/angular-aria.min.js"></script>
+  <script src="js/lib/angular/notification.js"></script>
+
+  <script src="https://unpkg.com/angular-toastr/dist/angular-toastr.tpls.js"></script>
+
+
   <script src="js/app.js"></script>
   <script src="js/controllers/login.js"></script>
   <script src="js/controllers/AnalyticsController.js"></script>
@@ -51,10 +51,10 @@
   <script src="app/js/userjs.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/css/select2.min.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.10/js/select2.min.js"></script>
-	
+
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
+<div class="wrapper" style="height:948px">
 
   <header class="main-header">
 
@@ -98,7 +98,7 @@
                       <p>Why not buy a new awesome theme?</p>
                     </a>
                   </li>
-                  
+
                   <li>
                     <a href="home">
                       <div class="pull-left">
@@ -320,7 +320,7 @@
     </nav>
   </header>
   <!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
+  <aside class="main-sidebar" style="visibility:hidden">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
       <!-- Sidebar user panel -->
@@ -337,7 +337,7 @@
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
           <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
+          <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>
               </span>
@@ -357,9 +357,9 @@
     <!-- Content Header (Page header) -->
 
     <!-- MAIN VIEW -->
-        <div ng-view>
+    <div ng-view>
 
-        </div>
+    </div>
     <!-- end MAIN VIEW -->
   </div>
   <!-- /.content-wrapper -->

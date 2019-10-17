@@ -155,7 +155,7 @@ app.get('/execute/:scriptParam1/:scriptParam2/:scriptParam3/:scriptParam4', func
    });
 
 	//using absolute path works, relative path does not
-   ps.addCommand('/home/sajith/Documents/TechOHack/TechopsHack/power.ps1 '+req.params.scriptParam1+' '+req.params.scriptParam2+' '+req.params.scriptParam3+' '+req.params.scriptParam4);
+   ps.addCommand('/home/prageethkalhara/Projects/projects/hack/latest/TechopsHack/power.ps1 '+req.params.scriptParam1+' '+req.params.scriptParam2+' '+req.params.scriptParam3+' '+req.params.scriptParam4);
 
    ps.invoke()
    .then(output => {

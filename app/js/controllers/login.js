@@ -8,32 +8,30 @@ myApp.controller('LoginController', ['$scope','$http','$location','toastr', func
        // $scope.getAll();
         $scope.email="p@gmail.com";   
         $scope.password="123";
+        $scope.isLoading=false;
+
+
        // $scope.login();
 
     };
-    
+
+    $scope.wait = function(ms){
+
+           var start = new Date().getTime();
+           var end = start;
+           while(end < start + ms) {
+             end = new Date().getTime();
+          }
+     }
+
     $scope.login = function (){
-        console.log($scope.email);
-        console.log($scope.password);
-        
-        $http.post($scope.appConfig+'/login', {
-                email: $scope.email,
-                password: $scope.password
-            }).success(
-                function(data){
-                    console.log(data.status)
-                    if(data.status){
-                    $location.url('/analytics');
-                    toastr.info('Successfully Logged In!!!', data.user[0].fname);
-                    }else{
-                        
-                    }
-                }
-            ).error(
-                function(error){
-                  console.log(error)
-                }
-            );
+        console.log("Logged");
+        $scope.isLoading=true;
+        //$scope.wait(3000);
+
+        $location.path('/home');
+
+
     }
     
     $scope.getAll = function () {

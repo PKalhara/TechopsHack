@@ -1,0 +1,77 @@
+
+<div class="wrapper" id="my" style="background-color:#222d32;height:unset">
+  <!-- Automatic ssselement centering -->
+  <div class="lockscreen-wrapper" style="height:940px">
+    <div class="lockscreen-logo" style="margin-left: -102px">
+      <a href="../../index2.html"><b>Host Meter</b></a>
+    </div>
+    <!-- User name -->
+    <div class="lockscreen-name" style="margin-left: -7px">John Doe</div>
+
+    <!-- START LOCK SCREEN ITEM -->
+    <div class="lockscreen-item" style="margin-left: -7px">
+      <!-- lockscreen image -->
+      <div class="lockscreen-image">
+        <img src="../../dist/img/user1-128x128.jpg" alt="User Image">
+      </div>
+      <!-- /.lockscreen-image -->
+
+      <!-- lockscreen credentials (contains the form) -->
+      <form class="lockscreen-credentials">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="User name">
+
+          <div class="input-group-btn">
+            <button type="button" class="btn"></button>
+          </div>
+        </div>
+      </form>
+      <form class="lockscreen-credentials" style="margin-top:50px">
+        <div class="input-group">
+          <input type="password" class="form-control" placeholder="password">
+
+          <div class="input-group-btn">
+            <button type="button" class="btn"><i class="fa fa-arrow-right text-muted" ng-click="login()"></i></button>
+          </div>
+        </div>
+      </form>
+      <!-- /.lockscreen credentials -->
+
+    </div>
+    <!-- /.lockscreen-item -->
+    <div class="help-block text-center" style="margin-left: -111px">
+      Enter your password to retrieve your session
+    </div>
+    <div class="text-center" style="margin-left: -111px">
+      <a href="login.html">Or sign in as a different user</a>
+    </div>
+    <div class="lockscreen-footer text-center">
+
+    </div>
+  </div>
+
+  <div class="row " >
+    <div class="col-md-4"></div>
+
+    <div class="col-md-4" ng-if="isLoading">
+      <div class="box box-danger box-solid">
+        <div class="box-header">
+          <h3 class="box-title">Loading state</h3>
+        </div>
+        <div class="box-body">
+          The body of the box
+        </div>
+        <!-- /.box-body -->
+        <!-- Loading (remove the following to stop the loading)-->
+        <div class="overlay">
+          <i class="fa fa-refresh fa-spin"></i>
+        </div>
+        <!-- end loading -->
+      </div>
+      <!-- /.box -->
+    </div>
+    <div class="col-md-4"></div>
+
+  </div>
+
+</div>

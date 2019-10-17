@@ -12,11 +12,11 @@ myApp.config(['$routeProvider','toastrConfig', function($routeProvider,toastrCon
       controller: 'AnalyticsController'
     }).
     when('/login', {
-      templateUrl: 'views/index.html',
+      templateUrl: 'views/login.html',
       controller: 'LoginController'
     }).
     otherwise({
-      redirectTo: '/home'
+      redirectTo: '/login'
     });
 
 angular.extend(toastrConfig, {

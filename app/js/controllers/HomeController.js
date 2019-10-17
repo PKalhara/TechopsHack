@@ -17,6 +17,10 @@ myApp.controller('HomeController', ['$scope','$http','$q','$location','toastr', 
 
     };
 
+    $scope.goTo = function (){
+             $location.path('/analytics');
+    }
+
     $scope.execute = function (){
 
         console.log($scope.esxi)
