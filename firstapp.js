@@ -67,6 +67,10 @@ app.get('/additem',function (req,res){
 	res.render('additem');
 });
 
+app.get('/getProgress',function (req,res){
+	console.log('Called');
+});
+
 app.post('/add', function(req,res){
 	
 	var data = {
