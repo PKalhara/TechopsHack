@@ -1,4 +1,3 @@
-const highlight = require('highlight.js');
 var express = require('express');
 var path = require('path');
 var mysql = require('mysql');
@@ -155,7 +154,8 @@ app.get('/execute/:scriptParam1/:scriptParam2/:scriptParam3/:scriptParam4', func
      noProfile: true
    });
 
-   ps.addCommand('/home/prageethkalhara/Projects/projects/hack/TechopsHack/power.ps1 '+req.params.scriptParam1+' '+req.params.scriptParam2+' '+req.params.scriptParam3+' '+req.params.scriptParam4);
+	//using absolute path works, relative path does not
+   ps.addCommand('/home/sajith/Documents/TechOHack/TechopsHack/power.ps1 '+req.params.scriptParam1+' '+req.params.scriptParam2+' '+req.params.scriptParam3+' '+req.params.scriptParam4);
 
    ps.invoke()
    .then(output => {

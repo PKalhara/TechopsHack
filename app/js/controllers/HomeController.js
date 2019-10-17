@@ -19,7 +19,7 @@ myApp.controller('HomeController', ['$scope','$http','$q','$location','toastr', 
 
     $scope.execute = function (){
 
-        console.log((Array.from($scope.esxi)).length)
+        console.log($scope.esxi)
         $scope.isLoading=true;
         $http.get($scope.appConfig+'/execute/:'+$scope.drpone+'/'+$scope.drptwo+'/'+$scope.drpthree+'/'+Array.from($scope.esxi),{
                 scriptParam1: $scope.drpone,

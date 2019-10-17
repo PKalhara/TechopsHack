@@ -62,7 +62,7 @@ background-color: green;
           <!-- /.form-group -->
           <div class="form-group">
             <label>Cluster</label>
-            <select ng-model="drptwo" class="form-control useSelect2" style="width: 100%;">
+            <select ng-model="drptwo" class="form-control select2" style="width: 100%;">
               <option  selected="selected">Alabama</option>
               <option>Utility Cluster</option>
               <option>R810-04</option>
@@ -75,7 +75,7 @@ background-color: green;
 
           <div class="form-group">
             <label>Esxi Version</label>
-            <select ng-model="drpthree" class="form-control useSelect2" style="width: 100%;">
+            <select ng-model="drpthree" class="form-control select2" style="width: 100%;">
               <option>6.0.0</option>
               <option>5.5.0</option>
             </select>
@@ -83,7 +83,7 @@ background-color: green;
 
           <div class="form-group">
             <label>Esxi</label>
-            <select class="useSelect2" data-placeholder="Select a State" style="width: 100%;" multiple="multiple">
+            <select class="select2" ng-model="esxi" data-placeholder="Select a State" style="width: 100%;" multiple="multiple">
               <option>Alabama</option>
               <option>Alaska</option>
               <option>California</option>
@@ -97,45 +97,44 @@ background-color: green;
 
          <button type="button" style="width:150px" ng-click="execute()" class="btn btn-block btn-success btn-sm">Execute</button>
 
-
-            <div class="row">
-              <div class="col-md-6">
-                <div class="box box-solid">
-
-                  <!-- /.box-header -->
-                  <div class="box-body">
-                    <div class="progress">
-                      <small class="label label-danger" ><i class="fa fa-clock-o"></i> </small>
-                      <div class="progress-bar progress-bar-primary progress-bar-striped" ng-model="progressValue" id="pbar" role="progressbar" aria-valuenow="100" aria-valuemin="100" aria-valuemax="100" ng-style="my()">
-                        <span class="sr-only">100% Complete (success)</span>
-                      </div>
-                    </div>
-
-
-                  </div>
-
-                  <!-- /.box-body -->
-                </div>
-                <!-- /.box -->
-              </div>
-              <!-- /.box -->
-
-
-          <!-- /.form-group -->
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-              <pre class="form-control code-block-pre" id="test"><code class="code-block-code" id="code"></code></pre>
-              <div>
-                <button id="autoscroll" class="btn btn-block btn-primary" type="button" onclick="toggleAutoScroll()">Toggle AutoScroll</button>
-              </div>
-            </div>
-       </div>
       </div>
+      <div class="col-md-6">
+          <div class="form-group">
+            <pre class="form-control code-block-pre" id="test"><code class="code-block-code" id="code"></code></pre>
+            <div>
+              <button id="autoscroll" class="btn btn-block btn-primary" type="button" onclick="toggleAutoScroll()">Toggle AutoScroll</button>
+            </div>
+          </div>
+     </div>
              
         <!-- /.col -->
         <!-- /.form-group -->
       </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="box box-solid">
+
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="progress">
+                <small class="label label-danger" ><i class="fa fa-clock-o"></i> </small>
+                <div class="progress-bar progress-bar-primary progress-bar-striped" ng-model="progressValue" id="pbar" role="progressbar" aria-valuenow="100" aria-valuemin="100" aria-valuemax="100" ng-style="my()">
+                  <span class="sr-only">100% Complete (success)</span>
+                </div>
+              </div>
+
+
+            </div>
+
+            <!-- /.box-body -->
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.box -->
+
+
+    <!-- /.form-group -->
+  </div>
 
       <!-- /.col -->
     </div>
