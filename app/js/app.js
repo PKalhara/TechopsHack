@@ -15,6 +15,18 @@ myApp.config(['$routeProvider','toastrConfig', function($routeProvider,toastrCon
       templateUrl: 'views/login.html',
       controller: 'LoginController'
     }).
+    when('/dashboard', {
+       templateUrl: 'views/dashboard.html',
+       controller: 'DashboardController'
+    }).
+    when('/baseline', {
+       templateUrl: 'views/baseline.html',
+       controller: 'BaselineController'
+    }).
+    when('/hubot', {
+        templateUrl: 'views/hubot.html',
+        controller: 'HubotController'
+    }).
     otherwise({
       redirectTo: '/login'
     });

@@ -29,7 +29,7 @@ myApp.controller('LoginController', ['$scope','$http','$location','toastr', func
         $scope.isLoading=true;
         //$scope.wait(3000);
 
-        $location.path('/home');
+        $location.path('/dashboard');
 
 
     }
